@@ -1,0 +1,150 @@
+/* App.css */
+
+.app {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.title {
+  color: whitesmoke;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family:cursive;
+
+
+
+}
+
+/* Styling for NavBar component */
+.nav {
+  background-color: #d86e16;
+  padding: 10px;
+
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family:cursive;
+
+}
+
+.nav li {
+  margin: 0 10px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Styling for EateryList component */
+.eatery-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.eatery-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eatery-card h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.eatery-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Styling for EateryForm component */
+.eatery-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.eatery-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.eatery-form input[type="text"],
+.eatery-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Eatery List */
+.eatery-list-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family:cursive;
+}
+
+.search-input,
+.filter-input {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 10px;
+  font-family:cursive;
+}
+
+.eatery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.eatery-item:hover {
+  background-color: #f0f0f0;
+}
+
+.no-eateries {
+  font-style: italic;
+  color: #999;
+}
+
+
+/* Sidebar */
+.sidebar {
+  width: 120px;
+  background-color: #d86e16;
+  padding: 20px;
+}
+
+.sidebar-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  margin-bottom: 10px;
+}
+
+.sidebar-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar-link:hover {
+  text-decoration: underline;
+}
+

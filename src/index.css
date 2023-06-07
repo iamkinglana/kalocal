@@ -1,0 +1,51 @@
+/* .app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+}
+
+.eatery-details {
+  margin-top: 20px;
+}
+
+.eatery-details__title {
+  margin-bottom: 10px;
+}
+
+.eatery-card {
+  display: flex;
+}
+
+.eatery-card__content {
+  flex: 1;
+}
+
+.eatery-card__name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.eatery-card__location {
+  margin-bottom: 10px;
+}
+
+.eatery-card__map {
+  margin-bottom: 20px;
+}
+
+.eatery-card__reviews {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.eatery-card__reviews-title {
+  margin-bottom: 10px;
+}
+
+.eatery-card__no-reviews {
+  font-style: italic;
+} */
