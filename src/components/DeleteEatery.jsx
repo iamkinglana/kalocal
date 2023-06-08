@@ -8,10 +8,12 @@ const DeleteEatery = ({ eateryId, onDelete }) => {
         "Content-Type": "application/json"
       }
     })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data); // Optional: Log the response from the server
-        onDelete(); // Invoke the onDelete callback to trigger any necessary updates
+      .then((response) => {
+        if (response.ok) {
+          onDelete(); // Invoke the onDelete callback to trigger any necessary updates
+        } else {
+          throw new Error("Failed to delete eatery");
+        }
       })
       .catch((error) => {
         console.error("Error deleting eatery:", error);

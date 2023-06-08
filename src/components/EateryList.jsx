@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ReviewList from "./ReviewList";
 import Review from "./Review";
 import DeleteEatery from "./DeleteEatery";
+import "../App.css"; // Import the CSS file
 
 const EateryList = ({ eateries }) => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -28,7 +29,7 @@ const EateryList = ({ eateries }) => {
   };
 
   return (
-    <div>
+    <div className="eatery-list-container"> {/* Add the container class */}
       <h2 className="eatery-list-heading">Eatery List</h2>
       <input
         type="text"
@@ -49,6 +50,7 @@ const EateryList = ({ eateries }) => {
           <div key={eatery.id} onClick={() => handleEateryClick(eatery)} className="eatery-item">
             <h3>{eatery.name}</h3>
             <p>Location: {eatery.location}</p>
+            <img src={eatery.picture} alt="Eatery Picture"/>
             <DeleteEatery
               eateryId={eatery.id}
               onDelete={() => handleDelete(eatery.id)}

@@ -4,7 +4,7 @@ import ReviewForm from "./ReviewForm";
 
 const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -21,13 +21,36 @@ const ReviewList = () => {
     fetchReviews();
   }, []);
 
+  const deleteReview = async (reviewId) => {
+    try {
+      const response = await fetch(`http://localhost:9292/reviews/${reviewId}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        // Remove the deleted review from the local state
+        setReviews((prevReviews) => prevReviews.filter((review) => review.id !== reviewId));
+      } else {
+        console.error("Failed to delete review.");
+      }
+    } catch (error) {
+      console.error("Error deleting review:", error);
+    }
+  };
+
   return (
     <div>
-      <h2>Reviews</h2>
-      {reviews.map((review) => (
-        <Review key={review.id} review={review} />
+      <h2>Review List</h2>
+      {reviews.map((review, index) => (
+        <div key={index}>
+          <p>Comment: {review.comment}</p>
+          <img src={review.picture} alt="Review Picture" />
+          <button onClick={() => deleteReview(review.id)}>Delete</button> {/* Add delete button */}
+
+        </div>
+
       ))}
-      <ReviewForm />
+      <ReviewForm/>
     </div>
   );
 };

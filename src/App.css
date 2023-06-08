@@ -95,6 +95,8 @@
   font-weight: bold;
   margin-bottom: 10px;
   font-family:cursive;
+  justify-content: center;
+
 }
 
 .search-input,
@@ -146,5 +148,74 @@
 
 .sidebar-link:hover {
   text-decoration: underline;
+}
+
+/* Eaterylist */
+.eatery-list-container {
+  margin: 20px;
+
+}
+
+/* .eatery-list-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+
+} */
+
+.search-input,
+.filter-input {
+  margin-bottom: 10px;
+  padding:10px;
+
+
+}
+
+.eatery-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.eatery-item:hover {
+  background-color: #f5f5f5;
+}
+
+.no-eateries {
+  margin-top: 20px;
+  font-style: italic;
+  color: gray;
+}
+
+/* Eateriee Ranking */
+.heading {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.eatery-list {
+  list-style: none;
+  padding: 0;
+}
+
+.eatery-item {
+  margin-bottom: 20px;
+}
+
+.eatery-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.eatery-rating {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-family: cursive;
+}
+
+.eatery-picture {
+  width: 100%;
+  height: auto;
 }
 

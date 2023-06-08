@@ -4,6 +4,7 @@ const EateryForm = () => {
   const [name, setName] = useState("");
   const [location, setLocation] = useState("");
   const [rating, setRating] = useState("");
+  const [picture, setPicture] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -11,7 +12,7 @@ const EateryForm = () => {
     fetch("http://localhost:9292/eateries", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, location, rating })
+      body: JSON.stringify({ name, location, rating , picture })
     })
       .then((response) => response.json())
       .then((data) => {
@@ -27,6 +28,7 @@ const EateryForm = () => {
     setName("");
     setLocation("");
     setRating("");
+    setPicture("");
   };
 
   return (
@@ -50,6 +52,12 @@ const EateryForm = () => {
           placeholder="Rating"
           value={rating}
           onChange={(event) => setRating(event.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Picture"
+          value={picture}
+          onChange={(event) => setPicture(event.target.value)}
         />
         <button type="submit">Submit</button>
       </form>
