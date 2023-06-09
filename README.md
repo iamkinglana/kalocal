@@ -30,10 +30,5 @@ The Eatery App utilizes the following technologies:
   - Google Maps API
 
 
-## License
-
-The Eatery App is open-source and released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute the app as per the terms of this license.
-
-
 
 Happy dining!
