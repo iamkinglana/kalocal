@@ -17,7 +17,7 @@ const DeleteEatery = ({ eateryId, onDelete }) => {
 
   return (
     <button onClick={handleDelete} className="delete-button">
-      Delete
+      {/* Delete */}
     </button>
   );
 };

@@ -154,6 +154,8 @@
 
   top: 105px;
   left: 450px;
+  width: 300px;
+  height: 300px;
 
 
 }
@@ -205,6 +207,8 @@
 
   text-align: center;
   justify-content: center;
+  width: 200px;
+  height: 300px;
 }
 
 .eatery-item {
