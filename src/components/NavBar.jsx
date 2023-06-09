@@ -5,7 +5,7 @@ import "../App.css"; // Import the CSS file
 const NavBar = () => {
   return (
     <nav className="nav"> {/* Add className */}
-    <h1 className="title">Eateries</h1>
+    <h1 className="title">Kalocal</h1>
       <ul>
         <li>
           <Link to="/">Home</Link>

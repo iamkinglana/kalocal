@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Review from "./Review";
 import ReviewForm from "./ReviewForm";
+import "../App.css"; // Import the CSS file
 
 const ReviewList = () => {
   const [reviews, setReviews] = useState([]);
@@ -40,17 +41,17 @@ const ReviewList = () => {
 
   return (
     <div>
-      <h2>Review List</h2>
+      <h2 className="review-list-heading">Review List</h2>
       {reviews.map((review, index) => (
-        <div key={index}>
+        <div key={index} className="review-item">
           <p>Comment: {review.comment}</p>
           <img src={review.picture} alt="Review Picture" />
-          <button onClick={() => deleteReview(review.id)}>Delete</button> {/* Add delete button */}
-
+          <button className="delete-button" onClick={() => deleteReview(review.id)}>
+            Delete
+          </button>
         </div>
-
       ))}
-      <ReviewForm/>
+      <ReviewForm />
     </div>
   );
 };

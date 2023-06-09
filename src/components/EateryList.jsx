@@ -30,7 +30,7 @@ const EateryList = ({ eateries }) => {
 
   return (
     <div className="eatery-list-container"> {/* Add the container class */}
-      <h2 className="eatery-list-heading">Eatery List</h2>
+      <h2 className="eatery-list-heading">Eateries</h2>
       <input
         type="text"
         placeholder="Search..."
@@ -50,6 +50,7 @@ const EateryList = ({ eateries }) => {
           <div key={eatery.id} onClick={() => handleEateryClick(eatery)} className="eatery-item">
             <h3>{eatery.name}</h3>
             <p>Location: {eatery.location}</p>
+            <p>Rating: {eatery.rating}</p>
             <img src={eatery.picture} alt="Eatery Picture"/>
             <DeleteEatery
               eateryId={eatery.id}

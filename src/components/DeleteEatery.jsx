@@ -2,25 +2,24 @@ import React from "react";
 
 const DeleteEatery = ({ eateryId, onDelete }) => {
   const handleDelete = () => {
-    fetch(`http://localhost:9292/eateries/${eateryId}`, {
+    fetch(`http://localhost:9292Y/eateries/${eateryId}`, {
       method: "DELETE",
-      headers: {
-        "Content-Type": "application/json"
-      }
     })
-      .then((response) => {
-        if (response.ok) {
-          onDelete(); // Invoke the onDelete callback to trigger any necessary updates
-        } else {
-          throw new Error("Failed to delete eatery");
-        }
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.message);
+        onDelete(); // Optional: Perform any additional actions after deletion
       })
       .catch((error) => {
-        console.error("Error deleting eatery:", error);
+        console.log("Failed to delete eatery:", error);
       });
   };
 
-  return <button onClick={handleDelete}>Delete</button>;
+  return (
+    <button onClick={handleDelete} className="delete-button">
+      Delete
+    </button>
+  );
 };
 
 export default DeleteEatery;

@@ -15,7 +15,7 @@ const Sidebar = () => {
         </li> */}
 
         <li>
-          <Link to="./EateriesRanking">Eateries Ranking</Link>
+          <Link to="./Maps">Directions</Link>
         </li>
 
 

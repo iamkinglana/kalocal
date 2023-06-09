@@ -23,14 +23,14 @@ class EateryRatings extends React.Component {
     const sortedEateries = this.state.eateries.sort((a, b) => b.rating - a.rating);
 
     return (
-      <div>
-        <h1 className="heading">Eatery Ratings</h1>
-        <ul className="eatery-list">
+      <div className='eateryratingdiv'>
+        <h1 className="headings">Eatery Ratings</h1>
+        <ul className="eatery-lissst">
           {sortedEateries.map((eatery) => (
-            <li key={eatery.id} className="eatery-item">
+            <li key={eatery.id} className="eaatery-item">
               <h3 className="eatery-name">{eatery.name}</h3>
               <p className="eatery-rating">Rating: {eatery.rating}</p>
-              <img className="eatery-picture" src={eatery.picture} alt={eatery.name} />
+              {/* <img className="eatery-picture" src={eatery.picture} alt={eatery.name} /> */}
             </li>
           ))}
         </ul>

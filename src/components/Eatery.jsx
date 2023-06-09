@@ -2,7 +2,7 @@ import React from 'react';
 
 const Eatery = ({ eatery }) => {
   return (
-    <div>
+    <div className='eatery'>
       <h2>{eatery.name}</h2>
       <p>Location: {eatery.location}</p>
       <p>Rating: {eatery.rating}</p>

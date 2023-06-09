@@ -32,7 +32,7 @@ const EateryForm = () => {
   };
 
   return (
-    <div>
+    <div className="addeatery">
       <h2>Add New Eatery</h2>
       <form onSubmit={handleSubmit}>
         <input

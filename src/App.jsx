@@ -7,6 +7,9 @@ import EateryForm from "./components/EateryForm";
 import Sidebar from "./components/Sidebar";
 import "./App.css"; // Import custom CSS file for styling
 import EateryRatings from "./components/EateryRatings";
+// import GoogleMaps from "./components/GoogleMaps";
+import Maps from "./components/Maps";
+import BackgroundVideo from "./components/BackgroundVideo";
 
 const App = () => {
   const [eateries, setEateries] = useState([]);
@@ -31,21 +34,28 @@ const App = () => {
 
   return (
     <Router>
+      <div>
+      <BackgroundVideo/>
+      </div>
+
       <div className="app">
+
+      {/* <BackgroundVideo/> */}
+
         <NavBar />
-        <Sidebar/>
+        <Sidebar />
+        <Maps />
+
 
         {/* <EateriesRanking/> */}
-        <EateryRatings/>
-
+        <EateryRatings />
 
         <Routes>
           <Route path="/" element={<EateryList eateries={eateries} />} />
           <Route path="/EateryForm" element={<EateryForm />} />
+          <Route path="/Maps" element={<Maps />} />
           {/* /eatery-form   This is for the above code incase it brigs issues*/}
-          
         </Routes>
-
 
 
       </div>
