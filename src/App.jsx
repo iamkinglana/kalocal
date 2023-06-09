@@ -57,7 +57,6 @@ const App = () => {
           {/* /eatery-form   This is for the above code incase it brigs issues*/}
         </Routes>
 
-
       </div>
     </Router>
   );
